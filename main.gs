@@ -1,6 +1,7 @@
 const personId = /* paste personID here */
 const expires = "/* paste cookie expiry here */"
 const cookie = "/* paste cookie here */"
+const resourceId = /* paste resourceID here */
 
 const options = {
   useDefaultCalendar: true,
@@ -44,7 +45,7 @@ function MakeCalendarRequest(startDate, endDate){
 
   for(retrys = 0; retrys < 3; retrys++){
     console.info("Requesting calendar file, attempt " + (retrys + 1));
-    let response = UrlFetchApp.fetch("https://itv.dzjintonik.eu/ResourceCalendar/ExportDataToFile?ResourceId=5050&DateFrom="+startDate+"T00%3A00%3A00%2B01%3A00&DateTo="+endDate+"T00%3A00%3A00%2B01%3A00", {
+    let response = UrlFetchApp.fetch("https://itv.dzjintonik.eu/ResourceCalendar/ExportDataToFile?ResourceId="+resourceId+"&DateFrom="+startDate+"T00%3A00%3A00%2B01%3A00&DateTo="+endDate+"T00%3A00%3A00%2B01%3A00", {
       headers: {
         "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
         "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
