@@ -4,7 +4,7 @@ const cookie = "/* paste cookie here */"
 const resourceId = /* paste resourceID here */
 
 const options = {
-  useDefaultCalendar: true,
+  useDefaultCalendar: false,
   calendarName: "Nucleus"
 }
 
