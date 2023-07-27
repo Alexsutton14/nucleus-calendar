@@ -1,4 +1,3 @@
-const personId = /* paste personID here */
 const expires = "/* paste cookie expiry here */"
 const cookie = "/* paste cookie here */"
 const resourceId = /* paste resourceID here */
@@ -119,7 +118,7 @@ function formatCookiesToString(sessionCookies){
       extraCookies = extraCookies + " " + key + "=" + value + ";";
     }
 
-  let output = "PersonId="+personId+"; ProgramId=; MasterProgramId=null; InternalCompanyId=1; .AspNet.Cookies="+cookie+";" + extraCookies;
+  let output = "ProgramId=; MasterProgramId=null; InternalCompanyId=1; .AspNet.Cookies="+cookie+";" + extraCookies;
   return output;
 }
 
