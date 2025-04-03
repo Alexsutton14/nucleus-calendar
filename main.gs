@@ -1,5 +1,6 @@
 const expires = "/* paste cookie expiry here */"
-const cookie = "/* paste cookie here */"
+const coreC1 = "/* paste cookie C1 here */"
+const coreC2 = "/* paste cookie C2 here */"
 const resourceId = /* paste resourceID here */
 
 const options = {
@@ -118,7 +119,7 @@ function formatCookiesToString(sessionCookies){
       extraCookies = extraCookies + " " + key + "=" + value + ";";
     }
 
-  let output = "ProgramId=; MasterProgramId=null; InternalCompanyId=1; .AspNet.Cookies="+cookie+";" + extraCookies;
+  let output = "ProgramId=; MasterProgramId=null; InternalCompanyId=1; .AspNetCore.Cookies=chunks-2; .AspNetCore.CookiesC1="+coreC1+"; .AspNetCore.CookiesC2="+coreC2+ ";" + extraCookies;
   return output;
 }
 
@@ -443,9 +444,6 @@ function FormatCalendarEvents (inputArray){
 
 function FetchAndUpdateCalendar(){
   // test user input
-  if (!cookie || typeof cookie != "string") {
-    throw "Cookie not found or invalid"
-  }
   if (!expires || typeof expires != "string") {
     throw "Cookie 'expires' value not found or invalid"
   }
@@ -461,7 +459,7 @@ function FetchAndUpdateCalendar(){
   let calendarData;
   // Check if cookie has expired and throw error if it has
   if(cookieExpiry && cookieExpiry < Date.now()){
-    throw "AspNet.Cookies Cookie Expired";
+    throw "Cookie Expired";
   }
   try{
     calendarData = MakeCalendarRequest(startDate, endDate);
