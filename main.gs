@@ -447,9 +447,6 @@ function FetchAndUpdateCalendar(){
   if (!expires || typeof expires != "string") {
     throw "Cookie 'expires' value not found or invalid"
   }
-  if (!personId || typeof personId != "number") {
-    throw "personId not found or invalid"
-  }
 
   const fortnightsToFetch = 26;
   const failDays = 1;
