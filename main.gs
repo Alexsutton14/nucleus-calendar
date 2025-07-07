@@ -1,32 +1,32 @@
 /*
 
-Library ID:
+Library ScriptID:
 1WgP91v450WvBiCQ5tYh3jEnjCvFlisEz0hi88ab-7K2_w_h2hZ7jUVdJ
 
 */
 
 function doGet(e){
-  return Nucleus.serverGet(e);
+  return NucleusLibrary.serverGet(e);
 }
 
 function enrolFormSubmit(formObject){
-  Nucleus.enrolFormSubmit(formObject);
+  NucleusLibrary.enrolFormSubmit(formObject);
 }
 
 function resetServerUserProps(){
-  Nucleus.resetServerUserProps();
+  NucleusLibrary.resetServerUserProps();
 }
 
 function clearCurrentTrigger(){
-  Nucleus.clearCurrentTrigger();
+  NucleusLibrary.clearCurrentTrigger();
 }
 
 function FetchAndUpdateCalendar(){
-  Nucleus.FetchAndUpdateCalendar();
+  NucleusLibrary.FetchAndUpdateCalendar();
 }
 
 function checkForExpiringCookie(){
-  Nucleus.checkForExpiringCookie();
+  NucleusLibrary.checkForExpiringCookie();
 }
 
 function getScriptURL() {
