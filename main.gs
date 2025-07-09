@@ -25,8 +25,8 @@ function FetchAndUpdateCalendar(){
   NucleusLibrary.FetchAndUpdateCalendar();
 }
 
-function checkForExpiringCookie(){
-  NucleusLibrary.checkForExpiringCookie();
+function DailyChecks(){
+  NucleusLibrary.DailyChecks();
 }
 
 function getScriptURL() {
